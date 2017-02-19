@@ -1,8 +1,10 @@
 @import 'componentes/normalize';
+@import "helpers/variaveis";
+@import "helpers/mixins";
 
-@import 'celulas/header';
-@import 'celulas/body';
-@import 'celulas/footer';
+@import 'layout/header';
+@import 'layout/body';
+@import 'layout/footer';
 
 *{
     box-sizing: border-box;

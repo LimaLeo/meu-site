@@ -433,7 +433,7 @@ header {
     padding: 20px;
     font-size: 1.25em; }
     header .logo a {
-      color: #fff;
+      color: white;
       text-decoration: none;
       text-transform: uppercase; }
       header .logo a:before {
@@ -450,12 +450,12 @@ header {
         header nav ul li a {
           font-size: 1em;
           font-weight: bold;
-          color: #fff;
+          color: white;
           text-decoration: none; }
           header nav ul li a:hover {
-            color: #65bdae; }
+            color: #9DC5BB; }
             header nav ul li a:hover:after {
-              background-color: #65bdae;
+              background-color: #9DC5BB;
               width: 60%; }
           header nav ul li a:after {
             content: "";
@@ -463,7 +463,7 @@ header {
             margin: 5px auto 0;
             width: 30%;
             height: 2px;
-            background-color: #fff;
+            background-color: white;
             -webkit-transition: all 0.3s linear;
             -moz-transition: all 0.3s linear;
             -o-transition: all 0.3s linear;
@@ -486,9 +486,73 @@ header {
 .banner-top {
   background: url(../images/code_landscape.jpg) center no-repeat; }
 
-main {
-  margin: 0 auto;
-  max-width: 80%; }
+main section {
+  display: inline-block;
+  width: 100%; }
+  main section h2 {
+    text-transform: uppercase;
+    font-size: 2.5em; }
+  main section button {
+    margin-top: 30px;
+    display: block;
+    border: solid 2px #17B890;
+    border-radius: 1.5em;
+    background-color: white;
+    color: #17B890;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 10px; }
+
+main .sobre h2 {
+  float: left;
+  width: 30%; }
+  main .sobre h2:before {
+    content: "{ ";
+    color: #9DC5BB; }
+  main .sobre h2:after {
+    content: " }";
+    color: #9DC5BB; }
+
+main .sobre article {
+  float: right;
+  width: 70%; }
+
+main .sobre .container {
+  height: 320px; }
+
+main .container {
+  padding: 80px 0; }
+
+main .contato {
+  background-color: #9DC5BB; }
+  main .contato h2 {
+    float: right;
+    width: 50%; }
+    main .contato h2:before {
+      content: "{ ";
+      color: white; }
+    main .contato h2:after {
+      content: " }";
+      color: white; }
+  main .contato form {
+    float: left;
+    width: 50%; }
+    main .contato form .field {
+      padding: 10px 0; }
+    main .contato form label {
+      float: left;
+      width: 20%; }
+    main .contato form input {
+      height: 1.5em; }
+    main .contato form input, main .contato form textarea {
+      width: 70%;
+      border: solid 1px #9DC5BB; }
+    main .contato form button {
+      float: right;
+      margin: 30px 50px 0 0; }
+  main .contato .container {
+    height: 430px; }
 
 footer ul li {
   display: inline-block; }

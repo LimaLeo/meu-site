@@ -1,0 +1,95 @@
+main{
+	section{
+		display: inline-block;
+	    width: 100%;
+		h2{
+			text-transform: uppercase;
+			font-size: 2.5em;
+		}
+
+		button{
+			margin-top: 30px;
+			display: block;
+			border: solid 2px $azul-secundario;
+			border-radius: 1.5em;
+			background-color: white; 
+			color: $azul-secundario;
+			text-transform: uppercase;
+			font-size: 0.9em;
+		    font-weight: bold;
+			padding: 10px;
+		}
+	}
+
+	.sobre{
+		h2{
+			float: left;
+			width: 30%;
+			&:before{
+				content: "{ ";
+				color: $azul;
+			}
+			&:after{
+				content: " }";
+				color: $azul;
+			}
+		}
+		article{
+			float: right;
+			width: 70%;
+		}
+
+		.container{
+			height: 320px;
+		}
+	}
+
+	.container{
+		padding: 80px 0;
+	}
+	.contato{
+		background-color: $azul;
+		h2{
+			float: right;
+			width: 50%;
+			&:before{
+				content: "{ ";
+				color: white;
+			}
+			&:after{
+				content: " }";
+				color: white;
+			}
+		}
+		form{
+			float: left;
+			width: 50%;
+
+			.field{
+				padding: 10px 0;
+			}
+
+			label{
+	    		float: left;
+    			width: 20%;
+			}
+			
+			input{
+				height: 1.5em;
+			}
+
+			input, textarea{
+				width: 70%;
+				border: solid 1px $azul;
+			}
+			button{
+				float: right;
+				margin: 30px 50px 0 0;  
+			}
+		}
+
+		.container{
+			height: 430px;
+		}
+	}
+}

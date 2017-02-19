@@ -16,7 +16,7 @@ header{
 		padding: 20px;
 		font-size: 1.25em;
 		a{
-			color: #fff;
+			color: white;
 			text-decoration: none;
 			text-transform: uppercase;
 			&:before{
@@ -38,12 +38,12 @@ header{
 				a{	
 					font-size: 1em;
 					font-weight: bold;
-					color: #fff;
+					color: white;
 					text-decoration: none;
 					&:hover{
-						color: rgb(101, 189, 174);
+						color: $azul;
 						&:after{
-							background-color: rgb(101, 189, 174);
+							background-color: $azul;
 							width: 60%;
 						}	
 					}
@@ -53,7 +53,7 @@ header{
 						margin: 5px auto 0;
 						width: 30%;
 						height: 2px;
-						background-color: #fff;
+						background-color: white;
 						-webkit-transition:all 0.3s linear;
 						-moz-transition:all 0.3s linear; 
 						-o-transition:all 0.3s linear;
