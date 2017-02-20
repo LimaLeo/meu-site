@@ -419,6 +419,16 @@ template {
 [hidden] {
   display: none; }
 
+* {
+  box-sizing: border-box; }
+
+.container {
+  margin: 0 auto;
+  width: 80%; }
+
+img {
+  max-width: 100%; }
+
 .fixed {
   display: none; }
 
@@ -484,14 +494,16 @@ header {
       font-size: 2.5em; }
 
 .banner-top {
-  background: url(../images/code_landscape.jpg) center no-repeat; }
+  background: url(../images/code_landscape.jpg) center no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
 
 main section {
-  display: inline-block;
   width: 100%; }
   main section h2 {
     text-transform: uppercase;
-    font-size: 2.5em; }
+    font-size: 2.5em;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.4); }
   main section button {
     margin-top: 30px;
     display: block;
@@ -502,11 +514,14 @@ main section {
     text-transform: uppercase;
     font-size: 0.9em;
     font-weight: bold;
-    padding: 10px; }
+    padding: 10px;
+    min-width: 120px; }
 
 main .sobre h2 {
   float: left;
-  width: 30%; }
+  width: 30%;
+  position: absolute;
+  top: 30%; }
   main .sobre h2:before {
     content: "{ ";
     color: #9DC5BB; }
@@ -519,7 +534,8 @@ main .sobre article {
   width: 70%; }
 
 main .sobre .container {
-  height: 320px; }
+  height: 335px;
+  position: relative; }
 
 main .container {
   padding: 80px 0; }
@@ -528,7 +544,10 @@ main .contato {
   background-color: #9DC5BB; }
   main .contato h2 {
     float: right;
-    width: 50%; }
+    width: 50%;
+    position: absolute;
+    top: 30%;
+    right: 0; }
     main .contato h2:before {
       content: "{ ";
       color: white; }
@@ -552,22 +571,22 @@ main .contato {
       float: right;
       margin: 30px 50px 0 0; }
   main .contato .container {
-    height: 430px; }
+    height: 430px;
+    position: relative; }
 
-footer ul li {
-  display: inline-block; }
-
-footer p {
-  text-align: center; }
-
-* {
-  box-sizing: border-box; }
-
-.container {
-  margin: 0 auto;
-  width: 80%; }
-
-img {
-  max-width: 100%; }
+footer {
+  background-color: black;
+  box-sizing: border-box;
+  margin: 0 auto; }
+  footer ul {
+    margin: 0;
+    padding: 0; }
+    footer ul li {
+      display: inline-block; }
+  footer p {
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 20px; }
 
 /*# sourceMappingURL=style.css.map */

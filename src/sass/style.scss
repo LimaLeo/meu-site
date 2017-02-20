@@ -1,10 +1,4 @@
 @import 'componentes/normalize';
-@import "helpers/variaveis";
-@import "helpers/mixins";
-
-@import 'layout/header';
-@import 'layout/body';
-@import 'layout/footer';
 
 *{
     box-sizing: border-box;
@@ -18,3 +12,10 @@
 img {
  max-width: 100%;
 }
+
+@import "helpers/variaveis";
+@import "helpers/mixins";
+
+@import 'layout/header';
+@import 'layout/body';
+@import 'layout/footer';
