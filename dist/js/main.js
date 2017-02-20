@@ -1,1 +1,1 @@
-console.log("Olá mundo!");
+$(function(){var a=$(".fixed");$(window).scroll(function(){$(this).scrollTop()>100?a.addClass("ativo"):a.removeClass("ativo")})});
