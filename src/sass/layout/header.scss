@@ -1,3 +1,4 @@
+/* menu fixo */
 .fixed{
 	display: none;
 	float: left;
@@ -6,10 +7,11 @@
 	position: fixed;
 	z-index: 1;
 
-	-webkit-transition:all 0.5s linear;
-	-moz-transition:all 0.5s linear; 
-	-o-transition:all 0.5s linear;
-	transition:all 0.5s linear;
+	-webkit-transition: height 3s ease;
+	-moz-transition: height 3s ease;
+	-ms-transition: height 3s ease;
+	-o-transition: height 3s ease;
+	transition: height 3s ease;
 	
 	.logo{
 		padding: 10px;
@@ -20,31 +22,7 @@
 	}
 }
 
-.ativo{
-	display: block;
-}
-
-.top{
-	padding-top: 15px;
-}
-
-.logo{
-	float: left;
-	padding: 20px;
-	font-size: 1.25em;
-	a{
-		color: white;
-		text-decoration: none;
-		text-transform: uppercase;
-		&:before{
-			content: "{ ";
-		}
-		&:after{
-			content: " }";
-		}
-	}
-}
-
+/* menu */
 nav{
 	float: right;
 	ul{
@@ -86,6 +64,7 @@ nav{
 	
 }
 
+/* header */
 header{
 	height: 447px;
 	position: relative;
@@ -111,4 +90,25 @@ header{
 	background: url(../images/code_landscape.jpg) center no-repeat; 
 	background-size: cover;
 	background-attachment: fixed;
+}
+
+.top{
+	padding-top: 15px;
+}
+
+.logo{
+	float: left;
+	padding: 20px;
+	font-size: 1.25em;
+	a{
+		color: white;
+		text-decoration: none;
+		text-transform: uppercase;
+		&:before{
+			content: "{ ";
+		}
+		&:after{
+			content: " }";
+		}
+	}
 }

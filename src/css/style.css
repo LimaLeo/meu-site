@@ -429,6 +429,7 @@ template {
 img {
   max-width: 100%; }
 
+/* menu fixo */
 .fixed {
   display: none;
   float: left;
@@ -436,34 +437,17 @@ img {
   background-color: black;
   position: fixed;
   z-index: 1;
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  transition: all 0.5s linear; }
+  -webkit-transition: height 3s ease;
+  -moz-transition: height 3s ease;
+  -ms-transition: height 3s ease;
+  -o-transition: height 3s ease;
+  transition: height 3s ease; }
   .fixed .logo {
     padding: 10px; }
   .fixed nav ul {
     padding: 10px; }
 
-.ativo {
-  display: block; }
-
-.top {
-  padding-top: 15px; }
-
-.logo {
-  float: left;
-  padding: 20px;
-  font-size: 1.25em; }
-  .logo a {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase; }
-    .logo a:before {
-      content: "{ "; }
-    .logo a:after {
-      content: " }"; }
-
+/* menu */
 nav {
   float: right; }
   nav ul {
@@ -495,6 +479,7 @@ nav {
       nav ul li:last-child {
         padding: 0; }
 
+/* header */
 header {
   height: 447px;
   position: relative; }
@@ -515,6 +500,22 @@ header {
   background: url(../images/code_landscape.jpg) center no-repeat;
   background-size: cover;
   background-attachment: fixed; }
+
+.top {
+  padding-top: 15px; }
+
+.logo {
+  float: left;
+  padding: 20px;
+  font-size: 1.25em; }
+  .logo a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase; }
+    .logo a:before {
+      content: "{ "; }
+    .logo a:after {
+      content: " }"; }
 
 main section {
   width: 100%; }
@@ -597,14 +598,34 @@ footer {
   box-sizing: border-box;
   margin: 0 auto; }
   footer ul {
-    margin: 0;
-    padding: 0; }
+    margin: 0 auto;
+    padding: 30px 0 0 0;
+    text-align: center; }
     footer ul li {
       display: inline-block; }
   footer p {
+    font-size: 1em;
     color: white;
     text-align: center;
     margin: 0;
     padding: 20px; }
+
+.facebook, .github, .linkedin {
+  background: url(../images/sprites.png) no-repeat; }
+
+.facebook {
+  background-position: -64px 0;
+  width: 32px;
+  height: 32px; }
+
+.github {
+  background-position: -32px 0;
+  width: 32px;
+  height: 32px; }
+
+.linkedin {
+  background-position: 0 0;
+  width: 32px;
+  height: 32px; }
 
 /*# sourceMappingURL=style.css.map */
