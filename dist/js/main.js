@@ -1,1 +1,1 @@
-$(function(){var a=$(".fixed");$(window).scroll(function(){$(this).scrollTop()>80?a.addClass("ativo"):a.removeClass("ativo")})});
+$(function(){var a=$(".fixed");$(window).scroll(function(){$(this).scrollTop()>80?a.fadeIn("slow"):a.stop().fadeOut("slow")})});

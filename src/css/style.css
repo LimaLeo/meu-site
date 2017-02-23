@@ -170,6 +170,7 @@
 /**
  * Add the correct display in IE 10-.
  */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,800");
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -429,6 +430,14 @@ template {
 img {
   max-width: 100%; }
 
+.font-ligth, nav ul li a, header .title h1, .logo, main article {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100; }
+
+.font-strong, strong, main section h2 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold; }
+
 /* menu fixo */
 .fixed {
   display: none;
@@ -436,12 +445,7 @@ img {
   width: 100%;
   background-color: black;
   position: fixed;
-  z-index: 1;
-  -webkit-transition: height 3s ease;
-  -moz-transition: height 3s ease;
-  -ms-transition: height 3s ease;
-  -o-transition: height 3s ease;
-  transition: height 3s ease; }
+  z-index: 1; }
   .fixed .logo {
     padding: 10px; }
   .fixed nav ul {
@@ -494,7 +498,7 @@ header {
     width: 80%;
     bottom: 20%; }
     header .title h1 {
-      font-size: 2.5em; }
+      font-size: 3.5em; }
 
 .banner-top {
   background: url(../images/code_landscape.jpg) center no-repeat;
@@ -520,9 +524,9 @@ header {
 main section {
   width: 100%; }
   main section h2 {
+    font-weight: bold;
     text-transform: uppercase;
-    font-size: 2.5em;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.4); }
+    font-size: 2.5em; }
   main section button {
     margin-top: 30px;
     display: block;
@@ -531,65 +535,66 @@ main section {
     background-color: white;
     color: #17B890;
     text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
     font-size: 0.9em;
     font-weight: bold;
     padding: 10px;
     min-width: 120px; }
 
-main .sobre h2 {
-  float: left;
-  width: 30%;
-  position: absolute;
-  top: 30%; }
-  main .sobre h2:before {
-    content: "{ ";
-    color: #9DC5BB; }
-  main .sobre h2:after {
-    content: " }";
-    color: #9DC5BB; }
-
-main .sobre article {
-  float: right;
-  width: 70%; }
-
-main .sobre .container {
-  height: 335px;
-  position: relative; }
-
 main .container {
   padding: 80px 0; }
 
-main .contato {
+main #sobre h2 {
+  float: left;
+  width: 30%;
+  position: absolute;
+  top: 40%; }
+  main #sobre h2:before {
+    content: "{ ";
+    color: #9DC5BB; }
+  main #sobre h2:after {
+    content: " }";
+    color: #9DC5BB; }
+
+main #sobre article {
+  float: right;
+  width: 60%; }
+
+main #sobre .container {
+  height: 335px;
+  position: relative; }
+
+main #contato {
   background-color: #9DC5BB; }
-  main .contato h2 {
+  main #contato h2 {
     float: right;
     width: 50%;
     position: absolute;
     top: 30%;
     right: 0; }
-    main .contato h2:before {
+    main #contato h2:before {
       content: "{ ";
       color: white; }
-    main .contato h2:after {
+    main #contato h2:after {
       content: " }";
       color: white; }
-  main .contato form {
+  main #contato form {
     float: left;
     width: 50%; }
-    main .contato form .field {
+    main #contato form .field {
       padding: 10px 0; }
-    main .contato form label {
+    main #contato form label {
       float: left;
       width: 20%; }
-    main .contato form input {
+    main #contato form input {
       height: 1.5em; }
-    main .contato form input, main .contato form textarea {
+    main #contato form input, main #contato form textarea {
       width: 70%;
       border: solid 1px #9DC5BB; }
-    main .contato form button {
+    main #contato form button {
       float: right;
       margin: 30px 50px 0 0; }
-  main .contato .container {
+  main #contato .container {
     height: 430px;
     position: relative; }
 
@@ -604,6 +609,7 @@ footer {
     footer ul li {
       display: inline-block; }
   footer p {
+    font-family: "Open Sans", sans-serif;
     font-size: 1em;
     color: white;
     text-align: center;

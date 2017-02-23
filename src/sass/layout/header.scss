@@ -6,12 +6,6 @@
 	background-color: black;
 	position: fixed;
 	z-index: 1;
-
-	-webkit-transition: height 3s ease;
-	-moz-transition: height 3s ease;
-	-ms-transition: height 3s ease;
-	-o-transition: height 3s ease;
-	transition: height 3s ease;
 	
 	.logo{
 		padding: 10px;
@@ -31,6 +25,7 @@ nav{
 			display: inline-block;
 			padding: 0 40px 0 0;
 			a{	
+				@extend .font-ligth;
 				font-size: 1em;
 				font-weight: bold;
 				color: white;
@@ -81,7 +76,8 @@ header{
 	    width: 80%;
 	    bottom: 20%;
 	    h1{
-	    	font-size: 2.5em;
+	    	@extend .font-ligth;
+	    	font-size: 3.5em;
 	    }
 	}
 }
@@ -99,6 +95,7 @@ header{
 .logo{
 	float: left;
 	padding: 20px;
+	@extend .font-ligth;
 	font-size: 1.25em;
 	a{
 		color: white;

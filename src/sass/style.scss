@@ -11,11 +11,17 @@
 }
 
 img {
- max-width: 100%;
+ 	max-width: 100%;
 }
 
+strong{
+	@extend .font-strong;
+}
+
+@import "helpers/fonts";
 @import "helpers/variaveis";
 @import "helpers/mixins";
+@import "helpers/extends";
 
 @import 'layout/header';
 @import 'layout/body';
