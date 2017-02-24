@@ -26,14 +26,33 @@ main{
 
 	.container{
 		padding: 80px 0;
+		position: relative;
 	}	
 
+	#inicio{
+		height: 450px;
+		position: relative;
+		.title{
+			float: left;
+			text-align: center;
+			color: white;
+			position: absolute;
+		    width: 100%;
+		    bottom: 20%;
+		    h1{
+		    	@extend .font-ligth;
+		    	font-size: 3.5em;
+		    }
+		}
+	}
+
 	#sobre{
+	    height: 360px;
 		h2{
 			float: left;
 			width: 30%;
 		    position: absolute;
-    		top: 40%;
+    		top: 60%;
 			&:before{
 				content: "{ ";
 				color: $azul;
@@ -48,19 +67,17 @@ main{
 			width: 60%;
 		}
 
-		.container{
-		    height: 335px;
-		    position: relative;
-		}
 	}
 
 	#contato{
+		height: 460px;
 		background-color: $azul;
+
 		h2{
 			float: right;
 			width: 50%;
 		    position: absolute;
-			top: 30%;
+			top: 70%;
 			right: 0;
 			&:before{
 				content: "{ ";
@@ -97,11 +114,6 @@ main{
 				float: right;
 				margin: 30px 50px 0 0;  
 			}
-		}
-
-		.container{
-			height: 430px;
-			position: relative;
 		}
 	}
 

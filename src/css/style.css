@@ -430,7 +430,7 @@ template {
 img {
   max-width: 100%; }
 
-.font-ligth, nav ul li a, header .title h1, .logo, main article {
+.font-ligth, nav ul li a, .logo, main #inicio .title h1, main article {
   font-family: "Open Sans", sans-serif;
   font-weight: 100; }
 
@@ -439,78 +439,67 @@ img {
   font-weight: bold; }
 
 /* menu fixo */
-.fixed {
-  display: none;
+header {
   float: left;
   width: 100%;
-  background-color: black;
   position: fixed;
-  z-index: 1; }
-  .fixed .logo {
-    padding: 10px; }
-  .fixed nav ul {
-    padding: 10px; }
+  z-index: 1;
+  padding-top: 15px;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear; }
+
+.fixed {
+  padding: 0;
+  background-color: #000; }
 
 /* menu */
 nav {
-  float: right; }
-  nav ul {
-    padding: 20px; }
-    nav ul li {
-      display: inline-block;
-      padding: 0 40px 0 0; }
-      nav ul li a {
-        font-size: 1em;
-        font-weight: bold;
-        color: white;
-        text-decoration: none; }
-        nav ul li a:hover {
-          color: #9DC5BB; }
-          nav ul li a:hover:after {
-            background-color: #9DC5BB;
-            width: 60%; }
-        nav ul li a:after {
-          content: "";
-          display: table;
-          margin: 5px auto 0;
-          width: 30%;
-          height: 2px;
-          background-color: white;
-          -webkit-transition: all 0.3s linear;
-          -moz-transition: all 0.3s linear;
-          -o-transition: all 0.3s linear;
-          transition: all 0.3s linear; }
-      nav ul li:last-child {
-        padding: 0; }
+  float: right;
+  padding: 10px;
+  height: 80px; }
+  nav ul li {
+    display: inline-block;
+    padding: 0 40px 0 0; }
+    nav ul li a {
+      font-size: 1em;
+      font-weight: bold;
+      color: white;
+      text-decoration: none; }
+      nav ul li a:hover {
+        color: #9DC5BB; }
+        nav ul li a:hover:after {
+          background-color: #9DC5BB;
+          width: 60%; }
+      nav ul li a:after {
+        content: "";
+        display: table;
+        margin: 5px auto 0;
+        width: 30%;
+        height: 2px;
+        background-color: white;
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
+        transition: all 0.3s linear; }
+    nav ul li:last-child {
+      padding: 0; }
+    nav ul li .active {
+      color: #9DC5BB; }
+      nav ul li .active:after {
+        background-color: #9DC5BB;
+        width: 60%; }
 
 /* header */
-header {
-  height: 447px;
-  position: relative; }
-  header section {
-    width: 100%;
-    display: block; }
-  header .title {
-    float: left;
-    text-align: center;
-    color: white;
-    position: absolute;
-    width: 80%;
-    bottom: 20%; }
-    header .title h1 {
-      font-size: 3.5em; }
-
 .banner-top {
   background: url(../images/code_landscape.jpg) center no-repeat;
   background-size: cover;
   background-attachment: fixed; }
 
-.top {
-  padding-top: 15px; }
-
 .logo {
   float: left;
-  padding: 20px;
+  padding: 10px;
   font-size: 1.25em; }
   .logo a {
     color: white;
@@ -542,35 +531,47 @@ main section {
     min-width: 120px; }
 
 main .container {
-  padding: 80px 0; }
-
-main #sobre h2 {
-  float: left;
-  width: 30%;
-  position: absolute;
-  top: 40%; }
-  main #sobre h2:before {
-    content: "{ ";
-    color: #9DC5BB; }
-  main #sobre h2:after {
-    content: " }";
-    color: #9DC5BB; }
-
-main #sobre article {
-  float: right;
-  width: 60%; }
-
-main #sobre .container {
-  height: 335px;
+  padding: 80px 0;
   position: relative; }
 
+main #inicio {
+  height: 450px;
+  position: relative; }
+  main #inicio .title {
+    float: left;
+    text-align: center;
+    color: white;
+    position: absolute;
+    width: 100%;
+    bottom: 20%; }
+    main #inicio .title h1 {
+      font-size: 3.5em; }
+
+main #sobre {
+  height: 360px; }
+  main #sobre h2 {
+    float: left;
+    width: 30%;
+    position: absolute;
+    top: 60%; }
+    main #sobre h2:before {
+      content: "{ ";
+      color: #9DC5BB; }
+    main #sobre h2:after {
+      content: " }";
+      color: #9DC5BB; }
+  main #sobre article {
+    float: right;
+    width: 60%; }
+
 main #contato {
+  height: 460px;
   background-color: #9DC5BB; }
   main #contato h2 {
     float: right;
     width: 50%;
     position: absolute;
-    top: 30%;
+    top: 70%;
     right: 0; }
     main #contato h2:before {
       content: "{ ";
@@ -594,9 +595,6 @@ main #contato {
     main #contato form button {
       float: right;
       margin: 30px 50px 0 0; }
-  main #contato .container {
-    height: 430px;
-    position: relative; }
 
 footer {
   background-color: black;

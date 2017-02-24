@@ -7,35 +7,25 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div class="fixed">
+	<header>
 		<div class="container">
 			<h1 class="logo"><a href=""><strong>leonardo</strong> lima</a></h1>
 			<nav>
 				<ul>
-					<li><a href="">inicio</a></li>
-					<li><a href="">sobre</a></li>
-					<li><a href="">contato</a></li>
+					<li><a href="#inicio" class="active">inicio</a></li>
+					<li><a href="#sobre">sobre</a></li>
+					<li><a href="#contato">contato</a></li>
 				</ul>
 			</nav>	
 		</div>
-	</div>	
-	<header class="top banner-top">
-		<div class="container">
-			<h1 class="logo"><a href=""><strong>leonardo</strong> lima</a></h1>
-			<nav>
-				<ul>
-					<li><a href="">inicio</a></li>
-					<li><a href="">sobre</a></li>
-					<li><a href="">contato</a></li>
-				</ul>
-			</nav>		
-			<section class="title">
-				<h1><strong>Web</strong> Developer</h1>
-			</section>
-		</div>
-	</header>
+	</header>	
 	<main>
-		<section class="sobre">
+		<section id="inicio"  class="top banner-top">
+			<div class="title">
+				<h1><strong>Web</strong> Developer</h1>
+			</div>
+		</section>
+		<section id="sobre">
 			<div class="container">
 				<h2>Sobre mim</h2>
 				<article>
@@ -49,7 +39,7 @@
 				</article>
 			</div>
 		</section>
-		<section class="contato">
+		<section id="contato">
 			<div class="container">
 				<form action="">
 					<div class="field"><label>Nome: </label><input type="text"></div>
