@@ -121,3 +121,9 @@ main{
 		@extend .font-ligth;
 	}
 }
+
+.banner-top{
+	background: url(../img/code_landscape.jpg) center no-repeat; 
+	background-size: cover;
+	background-attachment: fixed;
+}

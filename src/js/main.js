@@ -7,6 +7,10 @@ $(function(){
 			nav.removeClass("fixed");
 		} 
 	});  
+  $(".element").typed({
+    strings: ["Web", "Front-End."],
+    typeSpeed: 200
+  });
 });
 
 var sections = $('section')

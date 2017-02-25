@@ -420,6 +420,36 @@ template {
 [hidden] {
   display: none; }
 
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite; }
+
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 * {
   box-sizing: border-box; }
 
@@ -490,12 +520,6 @@ nav {
       nav ul li .active:after {
         background-color: #9DC5BB;
         width: 60%; }
-
-/* header */
-.banner-top {
-  background: url(../images/code_landscape.jpg) center no-repeat;
-  background-size: cover;
-  background-attachment: fixed; }
 
 .logo {
   float: left;
@@ -596,6 +620,11 @@ main #contato {
       float: right;
       margin: 30px 50px 0 0; }
 
+.banner-top {
+  background: url(../img/code_landscape.jpg) center no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+
 footer {
   background-color: black;
   box-sizing: border-box;
@@ -615,7 +644,7 @@ footer {
     padding: 20px; }
 
 .facebook, .github, .linkedin {
-  background: url(../images/sprites.png) no-repeat; }
+  background: url(../img/sprites.png) no-repeat; }
 
 .facebook {
   background-position: -64px 0;
