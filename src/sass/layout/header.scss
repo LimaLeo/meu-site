@@ -9,11 +9,29 @@ header{
 	-moz-transition:all 0.3s linear; 
 	-o-transition:all 0.3s linear;
 	transition:all 0.3s linear;
+	.logo{
+		float: left;
+		padding: 10px;
+		@extend .font-ligth;
+		font-size: 1.25em;
+		a{
+			color: white;
+			text-decoration: none;
+			text-transform: uppercase;
+			&:before{
+				content: "{ ";
+			}
+			&:after{
+				content: " }";
+			}
+		}
+	}
 }
 
 .fixed{
 	padding: 0;
 	background-color: #000;
+	opacity: 0.8;
 }
 
 /* menu */
@@ -66,22 +84,4 @@ nav{
 		}
 	}
 	
-}
-
-.logo{
-	float: left;
-	padding: 10px;
-	@extend .font-ligth;
-	font-size: 1.25em;
-	a{
-		color: white;
-		text-decoration: none;
-		text-transform: uppercase;
-		&:before{
-			content: "{ ";
-		}
-		&:after{
-			content: " }";
-		}
-	}
 }

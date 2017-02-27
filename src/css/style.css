@@ -460,7 +460,7 @@ template {
 img {
   max-width: 100%; }
 
-.font-ligth, nav ul li a, .logo, main #inicio .title h1, main article {
+.font-ligth, header .logo, nav ul li a, main #inicio .title h1, main article {
   font-family: "Open Sans", sans-serif;
   font-weight: 100; }
 
@@ -479,10 +479,23 @@ header {
   -moz-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear; }
+  header .logo {
+    float: left;
+    padding: 10px;
+    font-size: 1.25em; }
+    header .logo a {
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase; }
+      header .logo a:before {
+        content: "{ "; }
+      header .logo a:after {
+        content: " }"; }
 
 .fixed {
   padding: 0;
-  background-color: #000; }
+  background-color: #000;
+  opacity: 0.8; }
 
 /* menu */
 nav {
@@ -520,19 +533,6 @@ nav {
       nav ul li .active:after {
         background-color: #9DC5BB;
         width: 60%; }
-
-.logo {
-  float: left;
-  padding: 10px;
-  font-size: 1.25em; }
-  .logo a {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase; }
-    .logo a:before {
-      content: "{ "; }
-    .logo a:after {
-      content: " }"; }
 
 main section {
   width: 100%; }
