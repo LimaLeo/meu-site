@@ -1,4 +1,10 @@
 $(function(){
+
+  $(".hamburger-icon").on("click", function(event){
+    event.preventDefault();
+    $(this).toggleClass('active');
+  });
+
 	var nav = $('header');   
 	$(window).scroll(function () { 
 		if ($(this).scrollTop() >= 80) { 
@@ -7,6 +13,7 @@ $(function(){
 			nav.removeClass("fixed");
 		} 
 	});  
+  
   $(".element").typed({
     strings: ["Web", "Front-End."],
     typeSpeed: 200

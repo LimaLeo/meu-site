@@ -35,7 +35,7 @@ header{
 }
 
 /* menu */
-nav{
+nav.menu-desktop{
 	float: right;
 	padding: 10px;
 	height: 80px;
@@ -83,5 +83,67 @@ nav{
 			}
 		}
 	}
+}
+
+nav.menu-mobile{
+
+}
+
+@media (max-width: 600px)
+{
 	
+}
+
+@media not all and (max-width: 600px) {
+	.hamburger-icon{
+		display: none;
+	}
+}
+
+.hamburger-icon{
+    margin-top: 20px;
+    width: 36px;
+    height: 36px;
+    display: block;
+    border-top: 4px solid #fff;
+    float: right;
+    position: relative;
+    cursor: pointer;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.hamburger-icon::after, .hamburger-icon::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    margin-top: 6px;
+    background: #fff;
+    position: relative;
+    transition: -webkit-transform .2s ease;
+    transition: transform .2s ease;
+    transition: transform .2s ease, -webkit-transform .2s ease;
+}
+
+.hamburger-icon.active::after{
+	top: 2px;
+	-webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.hamburger-icon.active::before {
+    top: 6px;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.hamburger-icon.active{
+    border-top: none;
+}
+
+
+.hamburger-icon.active::after, .hamburger-icon.active::before {
+    margin-top: 0px;
 }

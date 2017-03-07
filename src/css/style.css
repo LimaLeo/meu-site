@@ -460,7 +460,7 @@ template {
 img {
   max-width: 100%; }
 
-.font-ligth, header .logo, nav ul li a, main #inicio .title h1, main article {
+.font-ligth, header .logo, nav.menu-desktop ul li a, main #inicio .title h1, main article {
   font-family: "Open Sans", sans-serif;
   font-weight: 100; }
 
@@ -498,24 +498,24 @@ header {
   opacity: 0.8; }
 
 /* menu */
-nav {
+nav.menu-desktop {
   float: right;
   padding: 10px;
   height: 80px; }
-  nav ul li {
+  nav.menu-desktop ul li {
     display: inline-block;
     padding: 0 40px 0 0; }
-    nav ul li a {
+    nav.menu-desktop ul li a {
       font-size: 1em;
       font-weight: bold;
       color: white;
       text-decoration: none; }
-      nav ul li a:hover {
+      nav.menu-desktop ul li a:hover {
         color: #9DC5BB; }
-        nav ul li a:hover:after {
+        nav.menu-desktop ul li a:hover:after {
           background-color: #9DC5BB;
           width: 60%; }
-      nav ul li a:after {
+      nav.menu-desktop ul li a:after {
         content: "";
         display: table;
         margin: 5px auto 0;
@@ -526,13 +526,59 @@ nav {
         -moz-transition: all 0.3s linear;
         -o-transition: all 0.3s linear;
         transition: all 0.3s linear; }
-    nav ul li:last-child {
+    nav.menu-desktop ul li:last-child {
       padding: 0; }
-    nav ul li .active {
+    nav.menu-desktop ul li .active {
       color: #9DC5BB; }
-      nav ul li .active:after {
+      nav.menu-desktop ul li .active:after {
         background-color: #9DC5BB;
         width: 60%; }
+
+@media not all and (max-width: 600px) {
+  .hamburger-icon {
+    display: none; } }
+
+.hamburger-icon {
+  margin-top: 20px;
+  width: 36px;
+  height: 36px;
+  display: block;
+  border-top: 4px solid #fff;
+  float: right;
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.hamburger-icon::after, .hamburger-icon::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  margin-top: 6px;
+  background: #fff;
+  position: relative;
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease; }
+
+.hamburger-icon.active::after {
+  top: 2px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+.hamburger-icon.active::before {
+  top: 6px;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg); }
+
+.hamburger-icon.active {
+  border-top: none; }
+
+.hamburger-icon.active::after, .hamburger-icon.active::before {
+  margin-top: 0px; }
 
 main section {
   width: 100%; }
