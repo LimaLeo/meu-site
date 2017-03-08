@@ -3,6 +3,7 @@ $(function(){
   $(".hamburger-icon").on("click", function(event){
     event.preventDefault();
     $(this).toggleClass('active');
+    $("header nav").toggleClass('active');
   });
 
 	var nav = $('header');   

@@ -460,7 +460,7 @@ template {
 img {
   max-width: 100%; }
 
-.font-ligth, header .logo, nav.menu-desktop ul li a, main #inicio .title h1, main article {
+.font-ligth, header .logo, nav ul li a, main #inicio .title h1, main article {
   font-family: "Open Sans", sans-serif;
   font-weight: 100; }
 
@@ -474,6 +474,7 @@ header {
   width: 100%;
   position: fixed;
   z-index: 1;
+  height: 80px;
   padding-top: 15px;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
@@ -498,24 +499,53 @@ header {
   opacity: 0.8; }
 
 /* menu */
-nav.menu-desktop {
+nav {
   float: right;
   padding: 10px;
   height: 80px; }
-  nav.menu-desktop ul li {
+  @media (max-width: 700px) {
+    nav {
+      width: auto;
+      overflow: hidden;
+      position: fixed;
+      background: #0a0a0a;
+      z-index: 9999;
+      right: -120px;
+      top: 80px;
+      height: auto;
+      padding: 0 20px 20px 20px; } }
+  @media (max-width: 700px) {
+    nav ul {
+      float: right;
+      margin-top: 10px;
+      padding: 0; } }
+  nav ul li {
     display: inline-block;
     padding: 0 40px 0 0; }
-    nav.menu-desktop ul li a {
+    @media (max-width: 700px) {
+      nav ul li {
+        display: block;
+        margin: 0px;
+        min-width: 80px;
+        padding-right: 0; }
+        nav ul li:last-child {
+          margin: 0px;
+          min-width: 80px; }
+        nav ul li .active {
+          color: white; }
+          nav ul li .active:after {
+            background-color: none; } }
+    nav ul li a {
       font-size: 1em;
       font-weight: bold;
       color: white;
       text-decoration: none; }
-      nav.menu-desktop ul li a:hover {
+      nav ul li a:hover {
         color: #9DC5BB; }
-        nav.menu-desktop ul li a:hover:after {
+        nav ul li a:hover:after {
           background-color: #9DC5BB;
           width: 60%; }
-      nav.menu-desktop ul li a:after {
+      nav ul li a:after {
         content: "";
         display: table;
         margin: 5px auto 0;
@@ -526,59 +556,73 @@ nav.menu-desktop {
         -moz-transition: all 0.3s linear;
         -o-transition: all 0.3s linear;
         transition: all 0.3s linear; }
-    nav.menu-desktop ul li:last-child {
+      @media (max-width: 700px) {
+        nav ul li a {
+          border-bottom: 2px solid #9DC5BB;
+          padding: 8px 10px;
+          max-width: 150px;
+          display: block;
+          text-decoration: none; }
+          nav ul li a:hover:after {
+            width: 60%; }
+          nav ul li a:after {
+            display: none;
+            padding: 8px 10px;
+            max-width: 150px; } }
+    nav ul li:last-child {
       padding: 0; }
-    nav.menu-desktop ul li .active {
+    nav ul li .active {
       color: #9DC5BB; }
-      nav.menu-desktop ul li .active:after {
+      nav ul li .active:after {
         background-color: #9DC5BB;
         width: 60%; }
 
-@media not all and (max-width: 600px) {
+@media (max-width: 700px) {
+  html, body {
+    font-size: 14px; }
   .hamburger-icon {
-    display: none; } }
+    margin-top: 20px;
+    width: 36px;
+    height: 36px;
+    display: block;
+    border-top: 4px solid #fff;
+    float: right;
+    position: relative;
+    cursor: pointer;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; } }
+  @media not all and (max-width: 700px) and (max-width: 700px) {
+    .hamburger-icon {
+      display: none; } }
 
-.hamburger-icon {
-  margin-top: 20px;
-  width: 36px;
-  height: 36px;
-  display: block;
-  border-top: 4px solid #fff;
-  float: right;
-  position: relative;
-  cursor: pointer;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-.hamburger-icon::after, .hamburger-icon::before {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 4px;
-  margin-top: 6px;
-  background: #fff;
-  position: relative;
-  transition: -webkit-transform .2s ease;
-  transition: transform .2s ease;
-  transition: transform .2s ease, -webkit-transform .2s ease; }
-
-.hamburger-icon.active::after {
-  top: 2px;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg); }
-
-.hamburger-icon.active::before {
-  top: 6px;
-  -webkit-transform: rotate(135deg);
-  transform: rotate(135deg); }
-
-.hamburger-icon.active {
-  border-top: none; }
-
-.hamburger-icon.active::after, .hamburger-icon.active::before {
-  margin-top: 0px; }
+@media (max-width: 700px) {
+  .hamburger-icon::after, .hamburger-icon::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    margin-top: 6px;
+    background: #fff;
+    position: relative;
+    transition: -webkit-transform .2s ease;
+    transition: transform .2s ease;
+    transition: transform .2s ease, -webkit-transform .2s ease; }
+  .hamburger-icon.active::after {
+    top: 2px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .hamburger-icon.active::before {
+    top: 6px;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg); }
+  .hamburger-icon.active {
+    border-top: none; }
+  .hamburger-icon.active::after, .hamburger-icon.active::before {
+    margin-top: 0px; }
+  nav.active {
+    right: 0px; } }
 
 main section {
   width: 100%; }
@@ -599,9 +643,12 @@ main section {
     font-weight: bold;
     padding: 10px;
     min-width: 120px; }
+    @media (max-width: 700px) {
+      main section button {
+        margin: 30px auto; } }
 
 main .container {
-  padding: 80px 0;
+  padding: 90px 0;
   position: relative; }
 
 main #inicio {
@@ -618,12 +665,16 @@ main #inicio {
       font-size: 3.5em; }
 
 main #sobre {
-  height: 360px; }
+  height: 400px; }
   main #sobre h2 {
     float: left;
-    width: 30%;
-    position: absolute;
-    top: 60%; }
+    width: 30%; }
+    @media (max-width: 700px) {
+      main #sobre h2 {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        text-align: center; } }
     main #sobre h2:before {
       content: "{ ";
       color: #9DC5BB; }
@@ -633,6 +684,14 @@ main #sobre {
   main #sobre article {
     float: right;
     width: 60%; }
+    @media (max-width: 700px) {
+      main #sobre article {
+        float: left;
+        width: 100%;
+        display: block;
+        margin: 0;
+        padding: 15px;
+        text-align: center; } }
 
 main #contato {
   height: 460px;
