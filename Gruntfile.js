@@ -82,27 +82,12 @@ module.exports = function(grunt) {
 
 		usemin: {
 			html: 'dist/**/*.html'
-		},
-
-		rev : {
-			options: {
-				encoding: 'utf8',
-				algorithm: 'md5',
-				length: 8
-			},
-			imagens: {
-				src: ['dist/img/**/*.{png, jpg, gif}']
-			},
-			minificados: {
-				src: ['dist/js/**/*.min.js', 'dist/css/**/*.min.css']	
-			} 
 		}
 	});
 
 	grunt.registerTask('server', ['browserSync', 'watch']);
 	grunt.registerTask('dist', ['sass', 'clean', 'copy']);
-	// grunt.registerTask('minifica', ['uglify', 'cssmin', 'imagemin']);
-	grunt.registerTask('minifica', ['useminPrepare', 'concat', 'uglify', 'cssmin', 'rev', 'usemin', 'imagemin'])
+	grunt.registerTask('minifica', ['useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin', 'imagemin'])
 
 	grunt.registerTask('default', ['dist', 'minifica']);
 
