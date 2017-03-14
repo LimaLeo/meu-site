@@ -1,0 +1,28 @@
+@import 'componentes/normalize';
+@import 'componentes/typedjs';
+
+*{
+    box-sizing: border-box;
+}
+
+.container{
+	margin: 0 auto;
+	width: 80%;
+}
+
+img {
+ 	max-width: 100%;
+}
+
+strong{
+	@extend .font-strong;
+}
+
+@import "helpers/fonts";
+@import "helpers/variaveis";
+@import "helpers/mixins";
+@import "helpers/extends";
+
+@import 'layout/header';
+@import 'layout/body';
+@import 'layout/footer';

@@ -1,0 +1,202 @@
+/* menu fixo */
+header{
+	float: left;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	height: 80px;
+	padding-top: 15px;
+	-webkit-transition:all 0.3s linear;
+	-moz-transition:all 0.3s linear; 
+	-o-transition:all 0.3s linear;
+	transition:all 0.3s linear;
+	.logo{
+		float: left;
+		padding: 10px;
+		@extend .font-ligth;
+		font-size: 1.25em;
+		a{
+			color: white;
+			text-decoration: none;
+			text-transform: uppercase;
+			&:before{
+				content: "{ ";
+			}
+			&:after{
+				content: " }";
+			}
+		}
+	}
+}
+
+.fixed{
+	padding: 0;
+	background-color: #000;
+	opacity: 0.8;
+}
+
+/* menu */
+nav{
+	float: right;
+	padding: 10px;
+	height: 80px;
+	@media #{$tablet}
+	{
+		width: auto;
+	    overflow: hidden;
+	    position: fixed;
+	    background: #0a0a0a;
+	    z-index: 9999;
+	    right: -120px;
+	    top: 80px;
+	    height: auto;
+	    padding: 0 20px 20px 20px; 
+	}
+	ul{
+		@media #{$tablet}
+		{
+			float: right;
+			margin-top: 10px;
+			padding: 0;
+		}
+		li{
+			display: inline-block;
+			padding: 0 40px 0 0;
+			@media #{$tablet}
+			{
+				display: block;
+			    margin: 0px;
+			    min-width: 80px;
+			    padding-right: 0;
+			    &:last-child{
+					margin: 0px;
+			    	min-width: 80px;
+				}
+
+				.active{
+					color: white;
+					&:after{
+						background-color: none;
+					}
+				}
+			}
+			a{	
+				@extend .font-ligth;
+				font-size: 1em;
+				font-weight: bold;
+				color: white;
+				text-decoration: none;
+				&:hover{
+					color: $azul;
+					&:after{
+						background-color: $azul;
+						width: 60%;
+					}	
+				}
+				&:after{
+					content: "";
+					display: table;
+					margin: 5px auto 0;
+					width: 30%;
+					height: 2px;
+					background-color: white;
+					-webkit-transition:all 0.3s linear;
+					-moz-transition:all 0.3s linear; 
+					-o-transition:all 0.3s linear;
+					transition:all 0.3s linear;
+				}
+				@media #{$tablet}
+				{
+					border-bottom: 2px solid #9DC5BB;
+					padding: 8px 10px;
+				    max-width: 150px;
+				    display: block;
+					text-decoration: none;
+					&:hover{
+						&:after{
+							width: 60%;
+						}	
+					}
+					&:after{
+						display: none;
+						padding: 8px 10px;
+				   		max-width: 150px;
+					}
+				}
+			}
+			&:last-child{
+				padding: 0;
+			}
+
+			.active{
+				color: $azul;
+				&:after{
+					background-color: $azul;
+					width: 60%;
+				}
+			}
+		}
+	}
+}
+
+@media #{$tablet}
+{
+	html, body{
+		font-size: 14px;
+	}
+
+	.hamburger-icon{
+	    margin-top: 20px;
+	    width: 36px;
+	    height: 36px;
+	    display: block;
+	    border-top: 4px solid #fff;
+	    float: right;
+	    position: relative;
+	    cursor: pointer;
+	    box-sizing: border-box;
+	    -webkit-box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    box-sizing: border-box;
+	    @media not all and #{$tablet}{
+			display: none;
+	    }
+	}
+	.hamburger-icon::after, .hamburger-icon::before{
+	    content: '';
+	    display: block;
+	    width: 100%;
+	    height: 4px;
+	    margin-top: 6px;
+	    background: #fff;
+	    position: relative;
+	    transition: -webkit-transform .2s ease;
+	    transition: transform .2s ease;
+	    transition: transform .2s ease, -webkit-transform .2s ease;
+	}
+
+	.hamburger-icon.active::after{
+		top: 2px;
+		-webkit-transform: rotate(45deg);
+	    transform: rotate(45deg);
+	}
+	.hamburger-icon.active::before {
+	    top: 6px;
+	    -webkit-transform: rotate(135deg);
+	    transform: rotate(135deg);
+	}
+
+	.hamburger-icon.active{
+	    border-top: none;
+	}
+
+
+	.hamburger-icon.active::after, .hamburger-icon.active::before {
+	    margin-top: 0px;
+	}
+	
+	nav.active{
+		right: 0px;
+	}
+}
+

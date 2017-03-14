@@ -1,0 +1,44 @@
+footer{
+	background-color: black;
+	box-sizing: border-box;
+	margin: 0 auto;
+	ul{
+		margin: 0 auto;
+		padding: 30px 0 0 0;
+		text-align: center;
+		li{
+			display: inline-block;
+		}
+	}
+	p{	
+		font-family: $font;
+		font-size: 1em;
+		color: white;
+		text-align: center;
+		margin: 0;
+		padding: 20px;
+	}
+}
+
+.facebook, .github, .linkedin{
+	background: url(../img/sprites.png) no-repeat;
+}
+
+.facebook{
+	background-position: -64px 0;
+	width: 32px;
+	height: 32px;
+}
+
+.github{
+	background-position: -32px 0;
+	width: 32px;
+	height: 32px;
+}
+
+.linkedin{
+	background-position: 0 0;
+	width: 32px;
+	height: 32px;
+}
+

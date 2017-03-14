@@ -4,13 +4,13 @@ module.exports = function(grunt) {
 			public: {
 				expand: true,
 				cwd: 'src',
-				src: '*.html',
+				src: '**',
 				dest: 'dist'
 			}
 		},
 
 		clean: {
-			build: {
+			dist: {
 				src: 'dist'
 			}
 		},
@@ -26,33 +26,9 @@ module.exports = function(grunt) {
 	        }
     	},
 
-		uglify: {
-		    build: {
-		      files: [{
-		          expand: true,
-		          cwd: 'src/js',
-		          src: '**/*.js',
-		          dest: 'dist/js'
-		      }]
-		    }
-		 },
-
-		cssmin: {
-		  build: {
-		    files: [{
-		      expand: true,
-		      cwd: 'src/css',
-		      src: ['*.css', '*.min.css'],
-		      dest: 'dist/css',
-		      ext: '.css'
-		    }]
-		  }
-		},
-
 		imagemin: {
 			build: {
 				expand: true,
-				flatten: true,
 				cwd: 'src/',
 				src: '**/*.{png,jpg,gif}',
 				dest: 'dist/img'
@@ -98,12 +74,35 @@ module.exports = function(grunt) {
 					baseDir: 'src'
 				}
 			}
+		},
+
+		useminPrepare: {
+			html: 'dist/**/*.html'
+		},
+
+		usemin: {
+			html: 'dist/**/*.html'
+		},
+
+		rev : {
+			options: {
+				encoding: 'utf8',
+				algorithm: 'md5',
+				length: 8
+			},
+			imagens: {
+				src: ['dist/img/**/*.{png, jpg, gif}']
+			},
+			minificados: {
+				src: ['dist/js/**/*.min.js', 'dist/css/**/*.min.css']	
+			} 
 		}
 	});
 
 	grunt.registerTask('server', ['browserSync', 'watch']);
 	grunt.registerTask('dist', ['sass', 'clean', 'copy']);
-	grunt.registerTask('minifica', ['uglify', 'cssmin', 'imagemin'])
+	// grunt.registerTask('minifica', ['uglify', 'cssmin', 'imagemin']);
+	grunt.registerTask('minifica', ['useminPrepare', 'concat', 'uglify', 'cssmin', 'rev', 'usemin', 'imagemin'])
 
 	grunt.registerTask('default', ['dist', 'minifica']);
 
@@ -117,5 +116,9 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-browser-sync')
+	grunt.loadNpmTasks('grunt-browser-sync');
+
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-usemin');
+	grunt.loadNpmTasks('grunt-rev');
 }
