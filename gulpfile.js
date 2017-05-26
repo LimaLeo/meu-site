@@ -6,7 +6,7 @@ var gulp = require('gulp'),
 gulp.task('styles', function() {
     return gulp.src('./src/scss/*/**.scss')
         .pipe($.plumber())
-        .pipe($.sass())
+        .pipe($.sass()).on('error', sass.logError)
         .pipe($.autoprefixer())
         .pipe(gulp.dest('./dist/css'));
 });
