@@ -2,6 +2,9 @@
 node_modules
 bower_components
 
+# Directories
+dist
+
 # Optional npm cache directory
 .npm
 .tmp
