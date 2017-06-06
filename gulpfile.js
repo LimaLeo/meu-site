@@ -1,6 +1,7 @@
 'use strict';
 
 var gulp = require('gulp'),
+    browserSync = require('browser-sync'),
     $ = require('gulp-load-plugins')();
 
 
@@ -35,13 +36,13 @@ gulp.task('usemin', function() {
 });
 
 gulp.task('server', function() {
-    $.browserSync.init({
+    browserSync.init({
         server: {
             baseDir: 'src'
         }
     });
 
-    gulp.watch('src/**/*').on('change', $.browserSync.reload);
+    gulp.watch('src/**/*').on('change', browserSync.reload);
 
     gulp.watch('src/js/**/*.js').on('change', function(event) {
         console.log("Linting " + event.path);
