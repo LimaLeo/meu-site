@@ -9,9 +9,6 @@ header{
 	z-index: 1;
 	height: 80px;
 	padding-top: 15px;
-	-webkit-transition:all 0.3s linear;
-	-moz-transition:all 0.3s linear; 
-	-o-transition:all 0.3s linear;
 	transition:all 0.3s linear;
 	.logo{
 		float: left;
@@ -103,9 +100,6 @@ nav{
 					width: 30%;
 					height: 2px;
 					background-color: white;
-					-webkit-transition:all 0.3s linear;
-					-moz-transition:all 0.3s linear; 
-					-o-transition:all 0.3s linear;
 					transition:all 0.3s linear;
 				}
 				@media #{$tablet}
@@ -158,9 +152,6 @@ nav{
 	    position: relative;
 	    cursor: pointer;
 	    box-sizing: border-box;
-	    -webkit-box-sizing: border-box;
-	    -moz-box-sizing: border-box;
-	    box-sizing: border-box;
 	    @media not all and #{$tablet}{
 			display: none;
 	    }
@@ -173,19 +164,15 @@ nav{
 	    margin-top: 6px;
 	    background: #fff;
 	    position: relative;
-	    transition: -webkit-transform .2s ease;
 	    transition: transform .2s ease;
-	    transition: transform .2s ease, -webkit-transform .2s ease;
 	}
 
 	.hamburger-icon.active::after{
 		top: 2px;
-		-webkit-transform: rotate(45deg);
 	    transform: rotate(45deg);
 	}
 	.hamburger-icon.active::before {
 	    top: 6px;
-	    -webkit-transform: rotate(135deg);
 	    transform: rotate(135deg);
 	}
 
