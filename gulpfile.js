@@ -47,7 +47,7 @@ gulp.task('server', function() {
         console.log("Linting " + event.path);
         gulp.src(event.path)
             .pipe(jshint())
-            .pipe(jshint.reporter(jshintStylish));
+            .pipe($.jshint.reporter($.jshintStylish));
     });
 
     gulp.watch('src/css/**/*.css').on('change', function(event) {
@@ -59,6 +59,7 @@ gulp.task('server', function() {
 
     gulp.watch('src/scss/**/*.scss').on('change', function(event) {
        var stream = gulp.src(event.path)
+            .pipe($.sass-lint())
             .pipe($.sass().on('error', function(erro) {
               console.log('SCSS, erro compilação: ' + erro.filename);
               console.log(erro.message);
