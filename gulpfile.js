@@ -1,15 +1,15 @@
 'use strict';
 
-var gulp = require('gulp'),
-    browserSync = require('browser-sync'),
-    $ = require('gulp-load-plugins')();
+var gulp = require('gulp')
+    ,browserSync = require('browser-sync')
+    ,$ = require('gulp-load-plugins')();
 
 
 gulp.task('default', ['copy'], function() {
 	gulp.start('build-img', 'usemin');
 });
 
-gulp.task('copy', ['clean'], function() {
+gulp.task('copy', ['clean', 'style'], function() {
 	return gulp.src('src/**/*')
 		.pipe(gulp.dest('dist'));
 });
@@ -33,6 +33,16 @@ gulp.task('usemin', function() {
       css: [$.autoprefixer, $.cssmin]
     }))
     .pipe(gulp.dest('dist'));
+});
+
+
+gulp.task('style', function() {
+    return gulp.src('src/scss/**/*.scss')
+        .pipe($.sass().on('error', function(erro) {
+              console.log('SCSS, erro compilação: ' + erro.filename);
+              console.log(erro.message);
+            }))
+            .pipe(gulp.dest('src/css'));
 });
 
 gulp.task('server', function() {
@@ -60,7 +70,7 @@ gulp.task('server', function() {
 
     gulp.watch('src/scss/**/*.scss').on('change', function(event) {
        var stream = gulp.src(event.path)
-            .pipe($.sass-lint())
+            .pipe($.sassLint())
             .pipe($.sass().on('error', function(erro) {
               console.log('SCSS, erro compilação: ' + erro.filename);
               console.log(erro.message);
