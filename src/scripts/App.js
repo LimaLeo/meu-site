@@ -1,3 +1,5 @@
+import styles from '../styles/styles.scss'
+
 $(function(){
 
   $(".hamburger-icon").on("click", function(event){
@@ -52,3 +54,5 @@ nav.find('a').on('click', function () {
   
   return false;
 });
+
+// import './typed'
