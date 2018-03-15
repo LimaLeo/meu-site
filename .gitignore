@@ -3,7 +3,7 @@ node_modules
 bower_components
 
 # Directories
-dist
+build
 
 # Optional npm cache directory
 .npm
